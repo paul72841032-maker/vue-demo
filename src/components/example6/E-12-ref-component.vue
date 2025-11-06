@@ -5,29 +5,55 @@
   </div>
 </template>
 
-<script>
-import { ref, onMounted } from 'vue';
+<script setup>
+import { ref, onMounted } from 'vue'
 
-export default {
-  name: 'E12RefComponent',
-  setup() {
-    const inputField = ref(null); // DOM 요소에 대한 ref 선언
+// DOM 요소 참조용 ref
+const inputField = ref(null)
 
-    const focusInput = () => {
-      inputField.value.focus(); // ref를 통해 DOM 요소에 접근
-    };
+// 버튼 클릭 시 input에 포커스 주기
+const focusInput = () => {
+  inputField.value?.focus()
+}
 
-    onMounted(() => {
-      console.log(inputField); // 컴포넌트가 마운트된 후, inputField에 접근 가능
-      if(inputField.value) {
-        inputField.value.focus();
-      }
-    });
-
-    return {
-      inputField,
-      focusInput
-    };
-  }
-};
+// 컴포넌트가 마운트될 때 자동 포커스
+onMounted(() => {
+  console.log(inputField) // 마운트 후 inputField 접근 가능
+  inputField.value?.focus()
+})
 </script>
+
+<style scoped>
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.5rem;
+}
+
+input {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: #42b883;
+}
+
+button {
+  background-color: #42b883;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #2c9c6b;
+}
+</style>

@@ -6,8 +6,16 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: ['message']
-};
+<script setup>
+import { defineProps, defineEmits } from 'vue'
+
+const props = defineProps({
+  message: {
+    type: String,
+    required: true
+  }
+})
+
+const emit = defineEmits(['custom-event'])
 </script>
+

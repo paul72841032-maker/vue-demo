@@ -1,15 +1,19 @@
 <template>
-  <E01Instance />
+  <ChildComponent />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import E01Instance from "@/components/example1/E-01-instance.vue";
+import E02Reactive from "@/components/example1/E-02-reactive.vue";
+import E04Directives from "@/components/example2/E-04-directives.vue";
+import E03Binding from "@/components/example1/E-03-binding.vue";
+import ChildComponent from "@/components/example3/ChildComponent.vue";
 
 export default defineComponent({
   name: 'App',
   components: {
-    E01Instance
+    ChildComponent,
   }
 });
 </script>
