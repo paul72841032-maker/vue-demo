@@ -20,7 +20,27 @@ npm install
 -EO12--- ref로 DOM요소 참조 -> <script setup>로 간단 작성 
 ### Compiles and hot-reloads for development
 ```
+### picture
+```
+<img width="909" height="199" alt="image" src="https://github.com/user-attachments/assets/d8621479-41e3-406e-a14f-6144378906eb" />
+<img width="666" height="174" alt="image" src="https://github.com/user-attachments/assets/1667d05a-a48e-4f4f-83d2-e5366d59b535" />
+<img width="794" height="186" alt="image" src="https://github.com/user-attachments/assets/3151640a-99f8-455e-937a-ee125cdb9cf9" />
+<img width="715" height="653" alt="image" src="https://github.com/user-attachments/assets/77b07201-e32c-46d8-a12e-3cb466ce702d" />
+<img width="633" height="237" alt="image" src="https://github.com/user-attachments/assets/ea4e073b-ca79-4ba3-9dbc-cc10fb9a2f55" />
+<img width="522" height="389" alt="image" src="https://github.com/user-attachments/assets/c4fb5ae8-f18a-407f-888f-f4178ea9f8b9" />
+
+
+
+
+
+
+
+
+
+
+
 npm run serve
+
 ```
 
 ### Compiles and minifies for production
